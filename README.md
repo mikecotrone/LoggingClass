@@ -1,24 +1,23 @@
 LoggingClass
 ============
 
-Xojo Class for Syslog Style File Logging
+Xojo Module for Syslog Style File Logging
 
 Written by: Mike Cotrone (mikec@intelligentvisibility.com)
 
 
 Logging Class Q & A
 ===================
-What is this Logging Class?
+What is this Logging Module?
         
-        This is a Xojo class that supports facility log levels, subsystem category, and log messages using a timestamp
+        This is a Xojo module that supports facility log levels, subsystem category, and log messages using a timestamp
         format similar to syslog
 
 Is this a GUI App?
         
-        I have provided a brief quick demo GUI for demo purposes. The value of this app is in the Logging Class which
-        you can very easily build into a more elaborate GUI based app.
+        I have provided a brief quick demo GUI for demo purposes. The GUI has a "Submit Button" that has an action in which submits your entries to the actual logfile and then calls a function to display your log on the GUI Text Area.
         
-How Do I see the logging?
+How Do I see the log file directly?
         
         There are a few Constants that you will want to change in order to set the desired file names and paths for the 
         following:
@@ -35,6 +34,8 @@ How Do I see the logging?
                     
                     
                     Default Log File Directory (if you dont change it): LogFileDir
+                    
+                    Open a Shell: tail -f <logfile>
 
 Why is there an Error and Systelog methods?
        
