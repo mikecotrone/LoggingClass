@@ -1,12 +1,12 @@
-LoggingClass
-============
+Logging Module For Xojo
+=======================
 
-Xojo Module for Syslog Style File Logging
+Written in Xojo 2013 r4.1
 
 Written by: Mike Cotrone (mikec@intelligentvisibility.com)
 
 
-Logging Class Q & A
+Logging Module Q & A
 ===================
 What is this Logging Module?
         
