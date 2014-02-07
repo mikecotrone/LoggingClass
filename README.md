@@ -15,7 +15,9 @@ What is this Logging Module?
 
 Is this a GUI App?
         
-        I have provided a brief quick demo GUI for demo purposes. The GUI has a "Submit Button" that has an action in which submits your entries to the actual logfile and then calls a function to display your log on the GUI Text Area.
+        I have provided a brief quick demo GUI for demo purposes. The GUI has a "Submit Button" that has an action in
+        which submits your entries to the actual logfile and then calls a function to display your log on the GUI Text
+        Area.
         
 How Do I see the log file directly?
         
