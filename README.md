@@ -1,9 +1,7 @@
 Logging Module For Xojo
 =======================
 
-Written in Xojo 2013 r4.1
-
-Written by: Mike Cotrone (mikec@intelligentvisibility.com)
+Written by: Mike Cotrone (mikec@intelligentvis.com)
 
 
 Logging Module Q & A
@@ -15,7 +13,7 @@ What is this Logging Module?
 
 Is this a GUI App?
         
-        I have provided a brief quick demo GUI for demo purposes. The GUI has a "Submit Button" that has an action in
+        I have provided a brief quick demo GUI for demo purposes. The GUI has a "Submit Buttons" that has actions in
         which submits your entries to the actual logfile and then calls a function to display your log on the GUI Text
         Area.
         
@@ -24,24 +22,14 @@ How Do I see the log file directly?
         There are a few Constants that you will want to change in order to set the desired file names and paths for the 
         following:
                     
-                    System Log File: kSystemLogFile
+                    System Log File: systemLogFile
                     
-                    System Log Dir:  kSystemLogFileDir
-                    
-                    
-                    
-                    Error log File:  kErrorLogFile
-                    
-                    Error log Dir:   kErrorLogFileDir
-                    
-                    
+                    System Log Dir:  systemLogFileDir
+                        
                     Default Log File Directory (if you dont change it): LogFileDir
                     
                     Open a Shell: tail -f <logfile>
-
-Why is there an Error and Systelog methods?
-       
-        I personally found a need to log system messages separately from my errors so I separated the two.
+                    
         
 Does this class cost anything?
         
@@ -49,4 +37,4 @@ Does this class cost anything?
 
 Dude you need to change or add this....
         
-        Send me an email at mikec@intelligentvisibility.com or on twitter: mike_cotrone
+        Send me an email
