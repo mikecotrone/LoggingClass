@@ -19,8 +19,8 @@ Protected Module LogModule
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
-		Sub systemLog(logfacility as Integer, subsystem as String, message as String)
-		  Var ProcessSystemLogMessage as Boolean
+		Function systemLog(logfacility as Integer, subsystem as String, message as String) As Boolean
+		  Var isProcessedBln as Boolean
 		  Var thisDateTime as New Date
 		  Var thisDateTimeStr as String = Str(thisDateTime)
 		  
@@ -31,32 +31,32 @@ Protected Module LogModule
 		  Case 1
 		    
 		    if logfacility = 1 Then
-		      ProcessSystemLogMessage = writeLogFile(thisDateTimeStr, logfacility, subsystem,message)
+		      isProcessedBln = writeLogFile(thisDateTimeStr, logfacility, subsystem,message)
 		    end if
 		    
 		  Case 2
 		    
 		    if logfacility = 1 OR logfacility = 2 Then
-		      ProcessSystemLogMessage = writeLogFile(thisDateTimeStr, logfacility,subsystem,message)
+		      isProcessedBln = writeLogFile(thisDateTimeStr, logfacility,subsystem,message)
 		    end if
 		    
 		  Case 3
 		    
 		    if logfacility = 1 OR logfacility = 2 OR logfacility = 3  Then
-		      ProcessSystemLogMessage = writeLogFile(thisDateTimeStr, logfacility,subsystem,message)
+		      isProcessedBln = writeLogFile(thisDateTimeStr, logfacility,subsystem,message)
 		    end if
 		    
 		  Case 4
 		    
 		    if logfacility = 1 OR logfacility = 2 OR logfacility = 3  OR logfacility = 4 Then
-		      ProcessSystemLogMessage = writeLogFile(thisDateTimeStr, logfacility,subsystem,message)
+		      isProcessedBln = writeLogFile(thisDateTimeStr, logfacility,subsystem,message)
 		    end if
 		    
 		  End Select
 		  
 		  
 		  
-		End Sub
+		End Function
 	#tag EndMethod
 
 	#tag Method, Flags = &h0
@@ -83,13 +83,15 @@ Protected Module LogModule
 		          if not LogFile.Directory then
 		            if LogFile.Exists then
 		              Tos = TextOutputStream.append(LogFile)
-		              Tos.Write(LogMessage)
-		              Tos.Close
+		              
 		            else
 		              Tos = TextOutputStream.Create(LogFile)
-		              Tos.Write(LogMessage)
-		              Tos.Close
+		              
 		            end if
+		            
+		            Tos.Write(LogMessage)
+		            Tos.Close
+		            
 		          end if
 		        end if
 		      end if

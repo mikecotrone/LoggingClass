@@ -1161,7 +1161,7 @@ End
 		  End Select
 		  
 		  // WRITE LOG ENTRY
-		  LogModule.systemLog(thisLogFacilityInt, thisSubSystemPopUpMenuTextStr, thisLogEntryTextFieldStr)
+		  Var isSuccess as Boolean = LogModule.systemLog(thisLogFacilityInt, thisSubSystemPopUpMenuTextStr, thisLogEntryTextFieldStr)
 		  
 		  // READ LAST LOG ENTRY AND SEND TO TEXT AREA
 		  Var lastLogEntryStrArr() as String = readAction()
