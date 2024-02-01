@@ -37,4 +37,4 @@ Does this class cost anything?
 
 Dude you need to change or add this....
         
-        Send me an email
+        Send me an email mikec@vistatechgso.com
